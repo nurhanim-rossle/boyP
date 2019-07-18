@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Bare - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
+        <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
+        <ul class="list-unstyled">
+          <li>Bootstrap 4.2.1</li>
+          <li>jQuery 3.3.1</li>
+        </ul>
+      </div>
+      <div class="col-5">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="boothNo" aria-describedby="artboothNo" placeholder="Enter Artbooth No">
+          </div>
+          <button id="submit-booth-no" class="btn btn-primary">Submit</button>
+          <!-- <a href="#" type="button" id="submit-booth-no" class="btn btn-primary">Submit</a> -->
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <section id="booth-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <form>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-4 col-form-label">Artbooth Name</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control-plaintext" id="artboothName" placeholder="Artbooth Name" readonly>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword3" class="col-sm-4 col-form-label">Total Artbooths</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control-plaintext" id="totalArtbooths" placeholder="Total Artbooths" readonly>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword3" class="col-sm-4 col-form-label">Total Tags</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control-plaintext" id="totalTags" placeholder="Total Tags" readonly>
+              </div>
+            </div>
+            <!-- <div class="form-group row">
+              <label for="inputPassword3" class="col-sm-4 col-form-label">Add tags</label>
+              <div class="col-sm-6">
+                <input type="number" class="form-control" id="addTags" placeholder="Password">
+              </div>
+            </div> -->
+          </form>
+        </div>
+
+        <div class="col-6">
+          1st Rep 
+          <form>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-4 col-form-label">Name</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control-plaintext" id="firstRepName" placeholder="Name" readonly>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword3" class="col-sm-4 col-form-label">IC/Passport No</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control-plaintext" id="firstRepIC" placeholder="IC" readonly>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword3" class="col-sm-4 col-form-label">Mobile</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control-plaintext" id="firstRepMobile" placeholder="Mobile No" readonly>
+              </div>
+            </div>
+          </form>
+          2nd Rep
+          <form>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-4 col-form-label">Name</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control-plaintext" id="secondRepName" placeholder="Name" readonly>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword3" class="col-sm-4 col-form-label">IC/Passport No</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control-plaintext" id="secondRepIC" placeholder="IC" readonly>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputPassword3" class="col-sm-4 col-form-label">Mobile</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control-plaintext" id="secondRepMobile" placeholder="Mobile No" readonly>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/handlebars-v4.1.2.js"></script>
+
+  <script>
+
+    
+    $('#submit-booth-no').click(function(){
+
+        let boothNo = $('#boothNo').val();
+
+        let url = 'testjson.json';
+        console.log(url);
+        $.getJSON(url, function(data){
+
+            for(let i = 0; i < data.length; i++) {
+                let obj = data[i];
+
+                if(boothNo == obj.id){
+                    //console.log(obj.title);
+                    $("#artboothName").val(obj.title);
+                }
+            }
+        });
+    });
+  </script>
+
+</body>  
+
+</html>
