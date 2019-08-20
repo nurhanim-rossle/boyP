@@ -61,8 +61,8 @@
           <div class="form-group">
             <input type="text" class="form-control" id="boothNo" aria-describedby="artboothNo" placeholder="Enter Artbooth No">
           </div>
-          <button id="submit-booth-no" class="btn btn-primary">Submit</button>
-          <!-- <a href="#" type="button" id="submit-booth-no" class="btn btn-primary">Submit</a> -->
+          <!-- <button id="submit-booth-no" class="btn btn-primary">Submit</button> -->
+          <a href="#" type="button" id="submit-booth-no" class="btn btn-primary">Submit</a>
         </form>
       </div>
     </div>
@@ -80,13 +80,13 @@
               </div>
             </div>
             <div class="form-group row">
-              <label for="inputPassword3" class="col-sm-4 col-form-label">Total Artbooths</label>
+              <label for="inputPassword3" class="col-sm-4 col-form-label">Total Artbooth(s)</label>
               <div class="col-sm-6">
                 <input type="text" class="form-control-plaintext" id="totalArtbooths" placeholder="Total Artbooths" readonly>
               </div>
             </div>
             <div class="form-group row">
-              <label for="inputPassword3" class="col-sm-4 col-form-label">Total Tags</label>
+              <label for="inputPassword3" class="col-sm-4 col-form-label">Total Tag(s)</label>
               <div class="col-sm-6">
                 <input type="text" class="form-control-plaintext" id="totalTags" placeholder="Total Tags" readonly>
               </div>
@@ -159,18 +159,30 @@
     
     $('#submit-booth-no').click(function(){
 
-        let boothNo = $('#boothNo').val();
+        let boothNo = ($('#boothNo').val()).toUpperCase();
 
-        let url = 'testjson.json';
-        console.log(url);
+        let url = 'https://nurhanim-rossle.github.io/testjson.json';
         $.getJSON(url, function(data){
+            console.log(data);
+
+            // let infoVal = ["artboothName", "totalArtbooths", "totalTags", "firstRepName", "firstRepIC", "firstRepMobile", "secondRepName", "secondRepIC", "secondRepMobile"];
 
             for(let i = 0; i < data.length; i++) {
                 let obj = data[i];
 
-                if(boothNo == obj.id){
+                if(boothNo == obj.boothNo){
                     //console.log(obj.title);
-                    $("#artboothName").val(obj.title);
+                    $("#artboothName").val(obj.boothName);
+                    $("#totalArtbooths").val(obj.boothTotal);
+                    $("#totalTags").val(obj.tagTotal);
+                    $("#firstRepName").val(obj.firstRep.firstRepName);
+                    $("#firstRepIC").val(obj.firstRep.firstRepIC);
+                    $("#firstRepMobile").val(obj.firstRep.firstRepMobile);
+                    $("#secondRepName").val(obj.secondRep.secondRepName);
+                    $("#secondRepIC").val(obj.secondRep.secondRepIC);
+                    $("#secondRepMobile").val(obj.secondRep.secondRepMobile);
+
+                    // $("#" + infoVal[i]).val(obj);
                 }
             }
         });
